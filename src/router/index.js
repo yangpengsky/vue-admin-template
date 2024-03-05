@@ -5,6 +5,8 @@ Vue.use(Router)
 
 /* Layout */
 import Layout from '@/layout'
+import layout from '@/layout/index.vue'
+import path from 'path'
 
 /**
  * Note: sub-menu only appear when route children.length >= 1
@@ -83,7 +85,7 @@ export const constantRoutes = [
     meta: {
       title: '车辆管理',
       // roles: ['admin', 'editor'],
-      icon: 'store'
+      icon: 'form'
     },
     children: [
       {
@@ -100,6 +102,24 @@ export const constantRoutes = [
         component: () => import('@/views/store/message'),
         name: 'storeMessage',
         meta: { title: '车辆信息' }
+      }
+    ]
+  },
+  {
+    path: '/commodity',
+    component: layout,
+    alwaysShow: true,
+    meta: {
+      title: '商品管理',
+      icon: 'form'
+    },
+    children: [
+      {
+        path: 'commodityList',
+        component: () => import('@/views/commodity/commodityList'),
+        name: 'commodityList',
+        meta: { title: '商品列表' }
+
       }
     ]
   },

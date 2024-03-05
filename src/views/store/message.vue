@@ -52,9 +52,7 @@
 
       <el-table-column label="品牌/车系/车型" width="180">
         <template slot-scope="scope">
-          <span style="margin-left: 10px">{{ scope.row.brandName }}/{{ scope.row.seriesName }}/{{
-              scope.row.type
-            }}</span>
+          <span style="margin-left: 10px">{{ scope.row.brandName }}/{{ scope.row.seriesName }}/{{scope.row.type }}</span>
         </template>
       </el-table-column>
 
