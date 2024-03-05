@@ -76,6 +76,33 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path: '/store',
+    component: Layout,
+    alwaysShow: true,
+    meta: {
+      title: '车辆管理',
+      // roles: ['admin', 'editor'],
+      icon: 'store'
+    },
+    children: [
+      {
+        path: 'addStore',
+        component: () => import('@/views/store/addStore'),
+        name: 'addStore',
+        meta: {
+          title: '添加库存',
+          roles: ['admin']
+        }
+      },
+      {
+        path: 'message',
+        component: () => import('@/views/store/message'),
+        name: 'storeMessage',
+        meta: { title: '车辆信息' }
+      }
+    ]
+  },
 
   {
     path: '/form',
