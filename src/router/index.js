@@ -116,10 +116,16 @@ export const constantRoutes = [
     children: [
       {
         path: 'commodityList',
-        component: () => import('@/views/commodity/commodityList'),
+        component: () => import('@/views/commodity/CommodityList.vue'),
         name: 'commodityList',
         meta: { title: '商品列表' }
 
+      },
+      {
+        path: 'fileUpload',
+        component: () => import('@/views/commodity/FileUpload.vue'),
+        name: 'fileUpload',
+        meta: { title: '文件上传' }
       }
     ]
   },

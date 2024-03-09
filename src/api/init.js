@@ -1,4 +1,5 @@
 import request from '@/utils/request'
+import * as url from 'url'
 
 export function fetchSeries() {
   return request({
@@ -35,5 +36,12 @@ export function getCars(query) {
     url: '/car/getList',
     method: 'post',
     data: query
+  })
+}
+
+export function getSpecifyStoreList() {
+  return request({
+    url: '/car/getSpecifyStoreList',
+    method: 'get'
   })
 }
