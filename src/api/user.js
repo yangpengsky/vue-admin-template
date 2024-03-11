@@ -22,3 +22,19 @@ export function logout() {
     method: 'post'
   })
 }
+
+export function getUserList(userProfile) {
+  return request({
+    url: '/user/getUserProfile',
+    method: 'post',
+    data: userProfile
+  })
+}
+
+export function resetUserPasswordBath(list) {
+  return request({
+    url: '/user/resetUserPasswordBath',
+    method: 'post',
+    data: list
+  })
+}
