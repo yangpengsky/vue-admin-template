@@ -43,19 +43,19 @@
       style="width: 100%"
       @selection-change="handleSelectionChange"
     >
-      <el-table-column type="selection" width="55" />
-      <el-table-column prop="id" label="用户id" width="120" />
-      <el-table-column prop="username" label="账号" width="120" />
+      <el-table-column type="selection" width="55"/>
+      <el-table-column prop="id" label="用户id" width="120"/>
+      <el-table-column prop="username" label="账号" width="120"/>
       <el-table-column label="头像" width="120">
         <template slot-scope="scope">
-          <el-image style="width: 120px;height: 80px" :src="scope.row.headImg" />
+          <el-image style="width: 120px;height: 80px" :src="scope.row.headImg"/>
         </template>
       </el-table-column>
-      <el-table-column prop="name" label="姓名" width="120" />
-      <el-table-column prop="age" label="年龄" width="120" />
-      <el-table-column prop="nickName" label="昵称" width="120" />
-      <el-table-column prop="phone" label="电话" width="120" />
-      <el-table-column prop="address" label="地址" show-overflow-tooltip />
+      <el-table-column prop="name" label="姓名" width="120"/>
+      <el-table-column prop="age" label="年龄" width="120"/>
+      <el-table-column prop="nickName" label="昵称" width="120"/>
+      <el-table-column prop="phone" label="电话" width="120"/>
+      <el-table-column prop="address" label="地址" show-overflow-tooltip/>
     </el-table>
     <el-pagination
       background

@@ -248,7 +248,7 @@ export default {
     getList() {
       getCars(this.listQuery).then(response => {
         this.tableData = response.data.records
-        this.total = response.data.total
+        this.total = Number(response.data.total)
       })
     },
     // 获取brand

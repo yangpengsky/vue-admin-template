@@ -38,3 +38,27 @@ export function resetUserPasswordBath(list) {
     data: list
   })
 }
+
+export function getAppointmentList(appointment) {
+  return request({
+    url: '/appointment/getAppointmentList',
+    method: 'post',
+    data: appointment
+  })
+}
+
+export function updateAppointmentSignIn(id) {
+  return request({
+    url: '/appointment/updateAppointmentSignIn',
+    method: 'get',
+    params: { id }
+  })
+}
+
+export function getWeekAppointmentList() {
+  return request({
+    url: '/appointment/getWeekAppointmentList',
+    method: 'get'
+  })
+}
+
